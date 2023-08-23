@@ -11,5 +11,8 @@
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <vm:MainViewModel />
   </Design.DataContext>
-
+<Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+    <Button Grid.Row="0" Grid.Column="0" Content="Test button"/>
+    <CheckBox Grid.Row="1" Grid.Column="0" Content="Test checkbox"/>
+</Grid>
 </UserControl>

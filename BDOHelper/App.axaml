@@ -2,9 +2,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="BDOHelper.App"
              RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+	<!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
-    <Application.Styles>
-        <FluentTheme />
-    </Application.Styles>
+	<Application.Styles>
+		<SimpleTheme />
+		<Style Selector="Button">
+			<Setter Property="Height" Value="22" />
+			<Setter Property="Padding" Value="3,0,3,0"/>
+			<Setter Property="Margin" Value="1" />
+			<Setter Property="MinWidth" Value="50" />
+			<Setter Property="Background" Value="#ff222222"/>
+			<Setter Property="Foreground" Value="#ffcc3333"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush" Value="#ff883333"/>
+		</Style>
+		<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="BorderBrush" Value="#cc3333"/>
+		</Style>
+		<Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="#cc443333"/>
+		</Style>
+
+	</Application.Styles>
 </Application>
